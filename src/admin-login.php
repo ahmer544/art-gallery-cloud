@@ -1,6 +1,10 @@
 <?php
 // Database connection
 require_once __DIR__ . '/db.php';
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 session_start();
 
