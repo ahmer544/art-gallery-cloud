@@ -1,9 +1,5 @@
 <?php
-// Database connection settings
-$host = "localhost";
-$dbname = "my_database";
-$username = "root";
-$password = ""; // Replace with your database password
+require_once __DIR__ . '/db.php';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
