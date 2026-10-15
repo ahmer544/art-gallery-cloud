@@ -1,5 +1,13 @@
 <?php
+// Include variables ($host, $user, $password, $database, $port)
 require_once __DIR__ . '/db.php';
+
+try {
+    $db = new PDO("mysql:host=$host;port=$port;dbname=$database;charset=utf8", $user, $password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}
 
 
     // Handle form submission
