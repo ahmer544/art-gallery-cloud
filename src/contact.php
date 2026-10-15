@@ -80,8 +80,7 @@ try {
 
         $message = "Thank you! Your message has been sent.";
     }
-} catch (PDOException $e) {
-    die("Could not connect to the database: " . $e->getMessage());
+}
 }
 ?>
 
