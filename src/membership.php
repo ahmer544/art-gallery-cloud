@@ -27,8 +27,7 @@ try {
         header("Location: payment.php");
         exit(); // Ensure the script stops after redirection
     }
-} catch (PDOException $e) {
-    die("Error: " . $e->getMessage());
+} 
 }
 ?>
 
