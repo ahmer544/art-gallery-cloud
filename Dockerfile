@@ -1,18 +1,19 @@
 FROM php:8.2-apache
 
-# Install required MySQL extensions
+# 1. Install required MySQL extensions for PHP
 RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable mysqli
 
-# Fix Apache MPM module conflict
-RUN a2dismod mpm_event mpm_worker || true && a2enmod mpm_prefork
+# 2. Completely remove lingering MPM module symlinks to fix AH00534
+RUN rm -f /etc/apache2/mods-enabled/mpm_*.load /etc/apache2/mods-enabled/mpm_*.conf \
+    && a2enmod mpm_prefork
 
-# Enable rewrite module
+# 3. Enable URL rewrite module
 RUN a2enmod rewrite
 
-# Copy project files into web root
+# 4. Copy project files into Apache web root
 COPY . /var/www/html/
 
-# Set permissions
+# 5. Set ownership permissions for Apache user
 RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
