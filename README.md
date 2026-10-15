@@ -15,3 +15,13 @@ A containerized, full-stack relational web platform for managing digital art gal
 ## 🏛️ System Architecture
 
 The application runs inside an isolated Linux container orchestrated on Railway PaaS, communicating with a managed cloud MySQL instance via dynamic environment variable bindings.
+[ Client / Browser ]
+│
+▼ (HTTP / Port Binding via POSIX $PORT)
+[ Railway Edge Proxy ]
+│
+▼
+[ Docker Container (PHP CLI + Router) ]
+│
+▼ (TCP Socket Connection)
+[ Managed Railway MySQL Database ]
