@@ -61,9 +61,7 @@
 				          <li><a href="gallery.php">Gallery</a></li>
 				          <li><a href="event.php">Events</a></li>
 				          <li><a href="ticket.php">Ticket</a></li>
-						  <li><a href="membership.php">Membership</a></li>
-						  <li><a href="about.php">About</a></li>
-				          <li><a href="contact.php">Contact Us</a></li>						  
+						  <li><a href="about.php">About</a></li>					  
 						  <li><a href="profile.php">Profile</a></li>	          
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
