@@ -1,23 +1,14 @@
-FROM php:8.2-apache
+FROM php:8.2-cli
 
-
+# Install required MySQL extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql && docker-php-ext-enable mysqli
 
+WORKDIR /app
 
-RUN a2dismod -f mpm_event mpm_worker mpm_prefork || true \
-    && rm -f /etc/apache2/mods-enabled/mpm_* \
-    && a2enmod mpm_prefork
-
-
-RUN a2enmod rewrite
-
-
-RUN apache2ctl configtest
-
-
-COPY . /var/www/html/
-
-
-RUN chown -R www-data:www-data /var/www/html
+# Copy application files
+COPY . .
 
 EXPOSE 80
+
+# Serve directly from the src directory and bind dynamically to Railway's PORT
+CMD ["sh", "-c", "php -S 0.0.0.0:${PORT:-80} -t src"]
