@@ -1,4 +1,4 @@
-# 🎨 Cloud-Native Art Gallery Management System
+# 🎨 Containerized Web Application Architecture & Cloud Database Migration
 
 ![PHP Version](https://img.shields.io/badge/PHP-7.4%20%7C%208.2-blue)
 ![Database](https://img.shields.io/badge/Database-MySQL-orange)
