@@ -32,11 +32,3 @@ ArtSphere is a full-stack art gallery management and exhibition platform. Origin
 
 ---
 
-## 🚀 Local Development & Docker Setup
-
-To run this application locally using Docker:
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/ahmer544/art-gallery-cloud.git](https://github.com/ahmer544/art-gallery-cloud.git)
-   cd art-gallery-cloud
