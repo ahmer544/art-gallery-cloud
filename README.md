@@ -1,4 +1,4 @@
-# 🎨 Containerized Web Application Architecture & Cloud Migration
+# 🎨 Cloud Deployment and Containerization of a PHP/MySQL Web Application
 
 ![Docker](https://img.shields.io/badge/Containerization-Docker-2496ED?logo=docker)
 ![Railway](https://img.shields.io/badge/PaaS-Railway-0B0D0E?logo=railway)
